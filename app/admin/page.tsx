@@ -165,7 +165,7 @@ export default function Admin() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div><label className={labelClass}>MARCA</label><input name="marca" value={form.marca} onChange={handleChange} required className={inputClass} /></div>
+                <div><label className={labelClass}>MARCA</label><select name="marca" value={form.marca} onChange={handleChange} required className={inputClass}><option value="">Seleccionar marca</option><option>Audi</option><option>Bmw</option><option>BYD</option><option>Changan</option><option>Chery</option><option>Chevrolet</option><option>Citroen</option><option>DFSK</option><option>Dodge</option><option>Fiat</option><option>Ford</option><option>GAC</option><option>Geely</option><option>GWM</option><option>Honda</option><option>Hyundai</option><option>Infiniti</option><option>JAC</option><option>Jaguar</option><option>Jeep</option><option>Kia</option><option>Land Rover</option><option>Lexus</option><option>Lifan</option><option>Mahindra</option><option>Mazda</option><option>Mercedes-Benz</option><option>MG</option><option>Mini</option><option>Mitsubishi</option><option>Nissan</option><option>Peugeot</option><option>Porsche</option><option>RAM</option><option>Renault</option><option>Seat</option><option>Skoda</option><option>Subaru</option><option>Suzuki</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option><option>Zotye</option></select></div>
                 <div><label className={labelClass}>MODELO</label><input name="modelo" value={form.modelo} onChange={handleChange} required className={inputClass} /></div>
               </div>
               <div className="grid grid-cols-3 gap-4">
