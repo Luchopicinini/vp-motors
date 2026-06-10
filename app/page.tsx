@@ -25,7 +25,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         </div>
         <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-orange-500/50 to-transparent"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center pt-16 md:pt-0">
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 border border-orange-500/30 bg-orange-500/5 px-4 py-2 mb-8">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>

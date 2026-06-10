@@ -48,10 +48,8 @@ export default function DetalleAuto() {
   return (
     <section className="min-h-screen pt-24 pb-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline mb-6 inline-block">← VOLVER AL STOCK</Link>
-
+        <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline mb-6 inline-block">VOLVER AL STOCK</Link>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
           <div>
             <div className="relative overflow-hidden bg-zinc-900 cursor-zoom-in" style={{aspectRatio:'16/10'}} onClick={() => setLightbox(true)}>
               {auto.imagenes.length > 0 ? (
@@ -67,7 +65,6 @@ export default function DetalleAuto() {
                 </>
               )}
             </div>
-
             <div className="grid grid-cols-5 gap-1.5 mt-2">
               {auto.imagenes.slice(0, 10).map((img: string, i: number) => (
                 <button key={i} onClick={() => setImgActual(i)} className={"overflow-hidden border-2 transition-all " + (i === imgActual ? "border-orange-500" : "border-zinc-700")} style={{aspectRatio:'1'}}>
@@ -84,7 +81,6 @@ export default function DetalleAuto() {
               <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white mt-1 leading-none">{auto.marca} <span className="text-orange-500">{auto.modelo}</span></h1>
               <p className="text-3xl md:text-4xl font-black text-orange-500 mt-3"></p>
             </div>
-
             <div className="grid grid-cols-2 gap-2">
               {specs.map((item) => (
                 <div key={item.label} className="bg-zinc-900 border border-zinc-800 p-3">
@@ -93,11 +89,9 @@ export default function DetalleAuto() {
                 </div>
               ))}
             </div>
-
             <div className="border-t border-zinc-800 pt-4">
               <p className="text-gray-400 leading-relaxed text-sm">{auto.descripcion}</p>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <a href={msgWhatsapp} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-black font-black text-sm px-6 py-4 tracking-widest transition-all text-center flex-1">CONSULTAR POR WHATSAPP</a>
               <Link href="/contacto" className="border border-zinc-700 hover:border-orange-500 text-white font-bold text-sm px-6 py-4 tracking-widest transition-all text-center flex-1">FORMULARIO DE CONTACTO</Link>
@@ -136,7 +130,10 @@ export default function DetalleAuto() {
         <div className="fixed inset-0 z-50 bg-black flex flex-col" onClick={() => setLightbox(false)}>
           <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800">
             <span className="text-white font-black text-sm">{auto.marca} {auto.modelo}</span>
-            <button className="text-white hover:text-orange-500 text-2xl transition-all">✕</button>
+            <div className="flex gap-3 items-center">
+              <a href={auto.imagenes[imgActual]} download target="_blank" rel="noopener noreferrer" className="text-white hover:text-orange-500 text-xs font-bold tracking-widest border border-zinc-700 hover:border-orange-500 px-3 py-1.5 transition-all">GUARDAR</a>
+              <button onClick={() => setLightbox(false)} className="text-white hover:text-orange-500 text-2xl transition-all">✕</button>
+            </div>
           </div>
           <div className="flex-1 flex items-center justify-center relative px-12" onClick={(e) => e.stopPropagation()}>
             <img src={auto.imagenes[imgActual]} alt={auto.marca} className="max-h-full max-w-full object-contain" />
