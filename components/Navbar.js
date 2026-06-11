@@ -53,6 +53,7 @@ export default function Navbar() {
         <div className="md:hidden bg-black border-t border-orange-500/20 px-6 py-4 flex flex-col gap-4">
           <Link href="/" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>INICIO</Link>
           <Link href="/stock" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>STOCK</Link>
+          <Link href="/financiamiento" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>FINANCIAMIENTO</Link>
           <Link href="/resenas" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>RESEÑAS</Link>
           <Link href="/contacto" className="text-orange-500 font-bold text-sm tracking-wide" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
         </div>
