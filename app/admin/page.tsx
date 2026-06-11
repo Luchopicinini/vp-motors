@@ -89,9 +89,29 @@ export default function Admin() {
     const urls: string[] = []
     const carpeta = form.marca.toLowerCase() + '-' + form.modelo.toLowerCase().replace(/ /g, '-') + '-' + form.año
 
+    const comprimirImagen = (file: File): Promise<File> => {
+      return new Promise((resolve) => {
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')!
+        const img = new Image()
+        img.onload = () => {
+          const maxW = 1200
+          const ratio = Math.min(maxW / img.width, 1)
+          canvas.width = img.width * ratio
+          canvas.height = img.height * ratio
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+          canvas.toBlob((blob) => {
+            resolve(new File([blob!], file.name, { type: 'image/jpeg' }))
+          }, 'image/jpeg', 0.75)
+        }
+        img.src = URL.createObjectURL(file)
+      })
+    }
+
     for (const foto of fotos) {
       const nombre = carpeta + '/' + Date.now() + '-' + foto.name.replace(/ /g, '-')
-      const { error } = await supabase.storage.from('autos').upload(nombre, foto)
+      const fotoComprimida = await comprimirImagen(foto)
+      const { error } = await supabase.storage.from('autos').upload(nombre, fotoComprimida)
       if (!error) {
         const { data } = supabase.storage.from('autos').getPublicUrl(nombre)
         urls.push(data.publicUrl)

@@ -24,6 +24,9 @@ export default function Navbar() {
           <Link href="/stock" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
             STOCK
           </Link>
+          <Link href="/financiamiento" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
+            FINANCIAMIENTO
+          </Link>
           <Link href="/resenas" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
             RESEÑAS
           </Link>
