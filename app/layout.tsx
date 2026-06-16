@@ -9,6 +9,9 @@ const geist = Geist({ subsets: ['latin'] })
 export const metadata = {
   title: 'VP Motors',
   description: 'Los mejores autos usados de Santiago',
+  icons: {
+    icon: '/favicon.ico',
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
