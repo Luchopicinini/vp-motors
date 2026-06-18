@@ -49,11 +49,11 @@ export default function Home() {
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto border-t border-orange-500/10 pt-10">
             <div>
-              <p className="text-3xl font-black text-orange-500">+50</p>
-              <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Autos</p>
+              <p className="text-3xl font-black text-orange-500">+100</p>
+              <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Autos vendidos</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-orange-500">+200</p>
+              <p className="text-3xl font-black text-orange-500">+130</p>
               <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Clientes</p>
             </div>
             <div>

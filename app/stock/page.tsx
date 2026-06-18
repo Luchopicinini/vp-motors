@@ -46,7 +46,7 @@ export default function Stock() {
           <div className='mb-10'>
             <span className='text-orange-500 text-xs font-medium tracking-[0.3em] uppercase'>Disponibles ahora</span>
             <h2 className='text-5xl font-black tracking-tighter text-white mt-2'>NUESTRO <span className='text-orange-500'>STOCK</span></h2>
-            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> vehÃƒÂ­culos encontrados</p>
+            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> Vehiculos encontrados</p>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
