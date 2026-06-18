@@ -24,7 +24,7 @@ export default function Resenas() {
         <FadeIn>
           <div className="mb-12">
             <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Lo que dicen nuestros clientes</span>
-            <h2 className="text-5xl font-black tracking-tighter text-white mt-2">RESE<span className="text-orange-500">NAS</span></h2>
+            <h2 className="text-5xl font-black tracking-tighter text-white mt-2">RESE<span className="text-orange-500">ÑAS</span></h2>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
@@ -34,7 +34,7 @@ export default function Resenas() {
               <div className="flex gap-1 mt-1 justify-center">
                 {[1,2,3,4,5].map((s) => (<span key={s} className="text-orange-500 text-lg">★</span>))}
               </div>
-              <p className="text-gray-500 text-xs mt-1">+100 resenas</p>
+              <p className="text-gray-500 text-xs mt-1">+100 reseñas</p>
             </div>
             <div className="flex-1">
               <p className="text-white font-bold text-lg">Calificacion general</p>
