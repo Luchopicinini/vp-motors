@@ -4,7 +4,7 @@ import FadeIn from '@/components/FadeIn'
 
 export default function Contacto() {
   const [enviado, setEnviado] = useState(false)
-  const [form, setForm] = useState({ nombre: '', email: '', TELÉFONO: '', mensaje: '' })
+  const [form, setForm] = useState({ nombre: '', email: '', telefono: '', mensaje: '' })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { setForm({ ...form, [e.target.name]: e.target.value }) }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -18,7 +18,7 @@ export default function Contacto() {
   const campos = [
     { name: 'nombre', label: 'NOMBRE', type: 'text', placeholder: 'Tu nombre' },
     { name: 'email', label: 'EMAIL', type: 'email', placeholder: 'tu@email.com' },
-    { name: 'TELÉFONO', label: 'TELÉFONO', type: 'tel', placeholder: '+56 9 ...' }
+    { name: 'telefono', label: 'TELÉFONO', type: 'tel', placeholder: '+56 9 ...' }
   ]
   const info = [
     { label: 'WHATSAPP', valor: '+56 9 7489 1078' },
@@ -46,7 +46,7 @@ export default function Contacto() {
             <div>
               {enviado ? (
                 <div className="bg-zinc-900 border border-orange-500/30 p-8 text-center">
-                  <p className="text-orange-500 text-4xl font-black mb-2">âœ“</p>
+                  <p className="text-orange-500 text-4xl font-black mb-2">✓</p>
                   <p className="text-white font-bold text-xl">Mensaje enviado</p>
                   <p className="text-gray-400 mt-2">Te contactaremos a la brevedad.</p>
                 </div>
@@ -67,7 +67,7 @@ export default function Contacto() {
           <div className="mt-16">
             <div className="flex items-center justify-between mb-4">
               <span className="text-orange-500 text-xs tracking-widest font-bold">CÓMO LLEGAR</span>
-              <a href="https://maps.app.goo.gl/JfxcpUUTp8CfKjjz5" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500 text-xs tracking-widest transition-all">ABRIR EN GOOGLE MAPS â†’</a>
+              <a href="https://maps.app.goo.gl/JfxcpUUTp8CfKjjz5" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-orange-500 text-xs tracking-widest transition-all">ABRIR EN GOOGLE MAPS →</a>
             </div>
             <div className="border border-zinc-800 overflow-hidden">
               <iframe src="https://maps.google.com/maps?q=Av+Camino+Los+Trapenses+2140+Lo+Barnechea+Santiago&output=embed" width="100%" height="400" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="grayscale" />

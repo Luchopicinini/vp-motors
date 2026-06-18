@@ -61,7 +61,7 @@ export default function Financiamiento() {
                 </div>
               </div>
               <div>
-                <label className="text-orange-500 text-xs tracking-widest font-bold block mb-2">PIE â€” {porcentajePie}% del precio (minimo 20%)</label>
+                <label className="text-orange-500 text-xs tracking-widest font-bold block mb-2">PIE — {porcentajePie}% del precio (mínimo 20%)</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm">$</span>
                   <input type="text" value={pie} onChange={handlePie} placeholder="0" className="w-full bg-zinc-900 border border-zinc-700 focus:border-orange-500 text-white pl-8 pr-4 py-3 text-sm outline-none transition-all" />
@@ -140,7 +140,7 @@ export default function Financiamiento() {
               <h2 className="text-4xl font-black tracking-tighter text-white mb-3">¿Listo para <span className="text-orange-500">comenzar?</span></h2>
               <p className="text-gray-500 mb-8">Contáctanos y descubre la diferencia</p>
               <a href="https://wa.me/56974891078?text=Hola, quiero consultar sobre financiamiento" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border border-white/20 hover:border-orange-500 hover:text-orange-500 text-white font-bold text-sm px-8 py-4 rounded-full tracking-wide transition-all">
-                Hablar con un asesor â†’
+                Hablar con un asesor →
               </a>
             </div>
           </div>

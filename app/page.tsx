@@ -33,18 +33,18 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6 leading-none">
-            TU PRÃ“XIMO<br />
+            TU PRÓXIMO<br />
             <span className="text-orange-500">AUTO</span> TE<br />
             ESPERA
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-            En <span className="text-white font-semibold">VP Motors</span> encontrarÃ¡s los mejores autos usados con garantÃ­a, financiamiento y respaldo total.
+            En <span className="text-white font-semibold">VP Motors</span> encontrarás los mejores autos usados con garantía, financiamiento y respaldo total.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/stock" className="bg-orange-500 hover:bg-orange-600 text-black font-black text-sm px-10 py-4 tracking-widest transition-all hover:scale-105">VER STOCK</Link>
-            <Link href="/contacto" className="border border-orange-500/50 hover:border-orange-500 text-white font-bold text-sm px-10 py-4 tracking-widest transition-all hover:bg-orange-500/5">CONTÃCTANOS</Link>
+            <Link href="/contacto" className="border border-orange-500/50 hover:border-orange-500 text-white font-bold text-sm px-10 py-4 tracking-widest transition-all hover:bg-orange-500/5">CONTÁCTANOS</Link>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto border-t border-orange-500/10 pt-10">
@@ -57,8 +57,8 @@ export default function Home() {
               <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Clientes</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-orange-500">5â˜…</p>
-              <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">ReseÃ±as</p>
+              <p className="text-3xl font-black text-orange-500">5★</p>
+              <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Reseñas</p>
             </div>
           </motion.div>
 
@@ -73,7 +73,7 @@ export default function Home() {
               <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Recién llegados</span>
               <h2 className="text-4xl font-black tracking-tighter text-white mt-2">AUTOS <span className="text-orange-500">DESTACADOS</span></h2>
             </div>
-            <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline hidden sm:block">VER TODOS â†’</Link>
+            <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline hidden sm:block">VER TODOS →</Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {autos.map((auto) => (<CardAuto key={auto.id} auto={auto} />))}
