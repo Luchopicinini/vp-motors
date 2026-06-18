@@ -136,6 +136,11 @@ export default function Admin() {
     fetchAutos()
   }
 
+  const handleVendido = async (auto: any) => {
+    await supabase.from('autos').update({ vendido: !auto.vendido }).eq('id', auto.id)
+    fetchAutos()
+  }
+
   const handleLogout = async () => {
     await supabase.auth.signOut()
     router.push('/admin/login')
@@ -145,7 +150,7 @@ export default function Admin() {
   const labelClass = 'text-orange-500 text-xs tracking-widest font-bold block mb-2'
 
   return (
-    <section className="min-h-screen pt-28 pb-20 px-6">
+    <section className="min-h-screen pt-28 pb-20 px-6 bg-zinc-950">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>
@@ -237,9 +242,10 @@ export default function Admin() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-white font-bold truncate">{auto.marca} {auto.modelo}</p>
-                      <p className="text-gray-500 text-xs mt-0.5">{auto.año} • {auto.km?.toLocaleString()} km • </p>
+                      <p className="text-gray-500 text-xs mt-0.5">{auto.año} • {auto.km?.toLocaleString()} km • ${auto.precio?.toLocaleString('es-CL')}</p>
                     </div>
                     <div className="flex gap-2 flex-shrink-0">
+                      <button onClick={() => handleVendido(auto)} className={"text-xs tracking-widest border px-3 py-1.5 transition-all " + (auto.vendido ? "text-green-400 border-green-400/30 hover:border-green-400" : "text-gray-400 border-zinc-700 hover:border-zinc-500")}>{auto.vendido ? "VENDIDO ✓" : "MARCAR VENDIDO"}</button>
                       <button onClick={() => handleEditar(auto)} className="text-orange-500 hover:text-orange-400 text-xs tracking-widest border border-orange-500/30 hover:border-orange-500 px-3 py-1.5 transition-all">EDITAR</button>
                       <button onClick={() => handleEliminar(auto.id)} className="text-red-400 hover:text-red-300 text-xs tracking-widest border border-red-400/30 hover:border-red-400 px-3 py-1.5 transition-all">ELIMINAR</button>
                     </div>

@@ -27,6 +27,9 @@ export default function Navbar() {
           <Link href="/financiamiento" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
             FINANCIAMIENTO
           </Link>
+          <Link href="/consignacion" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
+            CONSIGNACIÓN
+          </Link>
           <Link href="/resenas" className="text-gray-400 hover:text-orange-500 transition-colors text-sm font-medium tracking-wide">
             RESEÑAS
           </Link>
@@ -54,6 +57,7 @@ export default function Navbar() {
           <Link href="/" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>INICIO</Link>
           <Link href="/stock" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>STOCK</Link>
           <Link href="/financiamiento" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>FINANCIAMIENTO</Link>
+          <Link href="/consignacion" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>CONSIGNACIÓN</Link>
           <Link href="/resenas" className="text-gray-400 hover:text-orange-500 text-sm font-medium tracking-wide" onClick={() => setMenuAbierto(false)}>RESEÑAS</Link>
           <Link href="/contacto" className="text-orange-500 font-bold text-sm tracking-wide" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
         </div>

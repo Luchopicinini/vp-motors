@@ -46,6 +46,11 @@ export default function CardAuto({ auto }) {
             <div className="absolute top-3 left-3 bg-black/80 border border-orange-500/30 px-2 py-1">
               <span className="text-orange-500 text-xs font-bold tracking-widest">{auto.año}</span>
             </div>
+            {auto.vendido && (
+              <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">
+                <span className="bg-orange-500 text-black font-black text-lg px-6 py-2 tracking-widest -rotate-6">VENDIDO</span>
+              </div>
+            )}
             <button onClick={compartir} className="absolute top-3 right-3 bg-black/70 hover:bg-orange-500 text-white px-2 py-1 text-xs font-bold tracking-widest transition-all">
               {copiado ? '✓ COPIADO' : '⬡ COMPARTIR'}
             </button>
