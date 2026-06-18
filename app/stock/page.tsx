@@ -28,7 +28,7 @@ export default function Stock() {
     { label: 'Hasta $10M', min: 0, max: 10000000 },
     { label: '$10M - $15M', min: 10000000, max: 15000000 },
     { label: '$15M - $20M', min: 15000000, max: 20000000 },
-    { label: 'Más de $20M', min: 20000000, max: Infinity },
+    { label: 'MÃƒÂ¡s de $20M', min: 20000000, max: Infinity },
   ]
   const autosFiltrados = lista.filter((auto) => {
     const rango = precios.find((p) => p.label === precioFiltro)!
@@ -40,13 +40,13 @@ export default function Stock() {
   const selectClass = 'bg-zinc-900 border border-zinc-700 hover:border-orange-500/50 text-white text-xs tracking-widest px-4 py-2.5 focus:outline-none focus:border-orange-500 transition-all cursor-pointer'
 
   return (
-    <section className='min-h-screen pt-28 pb-20 px-6'>
+    <section className='min-h-screen pt-28 pb-20 px-6 bg-zinc-950'>
       <div className='max-w-7xl mx-auto'>
         <FadeIn>
           <div className='mb-10'>
             <span className='text-orange-500 text-xs font-medium tracking-[0.3em] uppercase'>Disponibles ahora</span>
             <h2 className='text-5xl font-black tracking-tighter text-white mt-2'>NUESTRO <span className='text-orange-500'>STOCK</span></h2>
-            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> vehículos encontrados</p>
+            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> vehÃƒÂ­culos encontrados</p>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
@@ -54,7 +54,7 @@ export default function Stock() {
             <select value={marcaFiltro} onChange={(e) => setMarcaFiltro(e.target.value)} className={selectClass}>{marcas.map((m) => <option key={m} value={m}>{m}</option>)}</select>
             <select value={precioFiltro} onChange={(e) => setPrecioFiltro(e.target.value)} className={selectClass}>{precios.map((p) => <option key={p.label} value={p.label}>{p.label}</option>)}</select>
             <select value={transmisionFiltro} onChange={(e) => setTransmisionFiltro(e.target.value)} className={selectClass}>{transmisiones.map((t) => <option key={t} value={t}>{t}</option>)}</select>
-            {(marcaFiltro !== 'Todas' || precioFiltro !== 'Todos' || transmisionFiltro !== 'Todas') && (<button onClick={() => { setMarcaFiltro('Todas'); setPrecioFiltro('Todos'); setTransmisionFiltro('Todas') }} className='text-orange-500 border border-orange-500/30 hover:border-orange-500 text-xs tracking-widest px-4 py-2.5 transition-all'>LIMPIAR ✕</button>)}
+            {(marcaFiltro !== 'Todas' || precioFiltro !== 'Todos' || transmisionFiltro !== 'Todas') && (<button onClick={() => { setMarcaFiltro('Todas'); setPrecioFiltro('Todos'); setTransmisionFiltro('Todas') }} className='text-orange-500 border border-orange-500/30 hover:border-orange-500 text-xs tracking-widest px-4 py-2.5 transition-all'>LIMPIAR Ã¢Å“â€¢</button>)}
           </div>
         </FadeIn>
         {autosFiltrados.length > 0 ? (
