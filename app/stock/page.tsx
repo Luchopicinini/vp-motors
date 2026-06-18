@@ -28,7 +28,7 @@ export default function Stock() {
     { label: 'Hasta $10M', min: 0, max: 10000000 },
     { label: '$10M - $15M', min: 10000000, max: 15000000 },
     { label: '$15M - $20M', min: 15000000, max: 20000000 },
-    { label: 'MÃƒÂ¡s de $20M', min: 20000000, max: Infinity },
+    { label: 'MÃ¡s de $20M', min: 20000000, max: Infinity },
   ]
   const autosFiltrados = lista.filter((auto) => {
     const rango = precios.find((p) => p.label === precioFiltro)!
@@ -46,7 +46,7 @@ export default function Stock() {
           <div className='mb-10'>
             <span className='text-orange-500 text-xs font-medium tracking-[0.3em] uppercase'>Disponibles ahora</span>
             <h2 className='text-5xl font-black tracking-tighter text-white mt-2'>NUESTRO <span className='text-orange-500'>STOCK</span></h2>
-            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> Vehiculos encontrados</p>
+            <p className='text-gray-500 mt-3'><span className='text-orange-500 font-bold'>{autosFiltrados.length}</span> vehículos encontrados</p>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
@@ -54,7 +54,7 @@ export default function Stock() {
             <select value={marcaFiltro} onChange={(e) => setMarcaFiltro(e.target.value)} className={selectClass}>{marcas.map((m) => <option key={m} value={m}>{m}</option>)}</select>
             <select value={precioFiltro} onChange={(e) => setPrecioFiltro(e.target.value)} className={selectClass}>{precios.map((p) => <option key={p.label} value={p.label}>{p.label}</option>)}</select>
             <select value={transmisionFiltro} onChange={(e) => setTransmisionFiltro(e.target.value)} className={selectClass}>{transmisiones.map((t) => <option key={t} value={t}>{t}</option>)}</select>
-            {(marcaFiltro !== 'Todas' || precioFiltro !== 'Todos' || transmisionFiltro !== 'Todas') && (<button onClick={() => { setMarcaFiltro('Todas'); setPrecioFiltro('Todos'); setTransmisionFiltro('Todas') }} className='text-orange-500 border border-orange-500/30 hover:border-orange-500 text-xs tracking-widest px-4 py-2.5 transition-all'>LIMPIAR Ã¢Å“â€¢</button>)}
+            {(marcaFiltro !== 'Todas' || precioFiltro !== 'Todos' || transmisionFiltro !== 'Todas') && (<button onClick={() => { setMarcaFiltro('Todas'); setPrecioFiltro('Todos'); setTransmisionFiltro('Todas') }} className='text-orange-500 border border-orange-500/30 hover:border-orange-500 text-xs tracking-widest px-4 py-2.5 transition-all'>LIMPIAR ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¢</button>)}
           </div>
         </FadeIn>
         {autosFiltrados.length > 0 ? (

@@ -38,11 +38,11 @@ export default function DetalleAuto() {
     </div>
   )
 
-  const msgWhatsapp = "https://wa.me/56974891078?text=Hola me interesa el " + auto.marca + " " + auto.modelo + " " + auto.año
+  const msgWhatsapp = "https://wa.me/56974891078?text=Hola me interesa el " + auto.marca + " " + auto.modelo + " " + auto.aÃ±o
   const specs = [
     { label: 'Kilometraje', valor: auto.km?.toLocaleString() + ' km' },
     { label: 'Combustible', valor: auto.combustible },
-    { label: 'Transmisión', valor: auto.transmision },
+    { label: 'TransmisiÃ³n', valor: auto.transmision },
     { label: 'Color', valor: auto.color },
   ]
 
@@ -50,7 +50,7 @@ export default function DetalleAuto() {
     <section className="min-h-screen pt-24 pb-20 px-4 md:px-6 bg-zinc-950">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline mb-6 inline-block">← VOLVER AL STOCK</Link>
+          <Link href="/stock" className="text-orange-500 text-xs tracking-widest hover:underline mb-6 inline-block">â† VOLVER AL STOCK</Link>
         </FadeIn>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <FadeIn delay={0.1}>
@@ -64,8 +64,8 @@ export default function DetalleAuto() {
                 <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 tracking-widest">AMPLIAR</div>
                 {auto.imagenes.length > 1 && (
                   <>
-                    <button onClick={(e) => { e.stopPropagation(); setImgActual((prev) => (prev === 0 ? auto.imagenes.length - 1 : prev - 1)) }} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-orange-500 text-white w-9 h-9 flex items-center justify-center transition-all text-lg">‹</button>
-                    <button onClick={(e) => { e.stopPropagation(); setImgActual((prev) => (prev === auto.imagenes.length - 1 ? 0 : prev + 1)) }} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-orange-500 text-white w-9 h-9 flex items-center justify-center transition-all text-lg">›</button>
+                    <button onClick={(e) => { e.stopPropagation(); setImgActual((prev) => (prev === 0 ? auto.imagenes.length - 1 : prev - 1)) }} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-orange-500 text-white w-9 h-9 flex items-center justify-center transition-all text-lg">â€¹</button>
+                    <button onClick={(e) => { e.stopPropagation(); setImgActual((prev) => (prev === auto.imagenes.length - 1 ? 0 : prev + 1)) }} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-orange-500 text-white w-9 h-9 flex items-center justify-center transition-all text-lg">â€º</button>
                   </>
                 )}
               </div>
@@ -76,14 +76,14 @@ export default function DetalleAuto() {
                   </button>
                 ))}
               </div>
-              {auto.imagenes.length > 10 && <p className="text-gray-600 text-xs mt-2">+{auto.imagenes.length - 10} fotos más</p>}
+              {auto.imagenes.length > 10 && <p className="text-gray-600 text-xs mt-2">+{auto.imagenes.length - 10} fotos mÃ¡s</p>}
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <div className="flex flex-col gap-4">
               <div>
-                <span className="text-orange-500 text-lg font-black tracking-widest">{auto.año}</span>
+                <span className="text-orange-500 text-lg font-black tracking-widest">{auto.aÃ±o}</span>
                 <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white mt-1 leading-none">{auto.marca} <span className="text-orange-500">{auto.modelo}</span></h1>
                 <p className="text-3xl font-black text-orange-500 mt-3">${auto.precio?.toLocaleString('es-CL')}</p>
               </div>
@@ -96,7 +96,7 @@ export default function DetalleAuto() {
                 ))}
               </div>
               <div className="border-t border-zinc-800 pt-4">
-                <p className="text-orange-500 text-xs tracking-widest font-bold mb-2">DESCRIPCIÓN</p>
+                <p className="text-orange-500 text-xs tracking-widest font-bold mb-2">DESCRIPCIÃ“N</p>
                 <div className="max-h-36 overflow-y-auto pr-1">
                   <p className="text-gray-400 leading-relaxed text-xs">{auto.descripcion}</p>
                 </div>
@@ -126,7 +126,7 @@ export default function DetalleAuto() {
                     </div>
                     <div className="p-4">
                       <h3 className="text-white font-black">{sim.marca} <span className="text-orange-500">{sim.modelo}</span></h3>
-                      <p className="text-gray-500 text-xs mt-1">{sim.año} • {sim.km?.toLocaleString()} km</p>
+                      <p className="text-gray-500 text-xs mt-1">{sim.aÃ±o} â€¢ {sim.km?.toLocaleString()} km</p>
                       <p className="text-orange-500 font-black mt-2">${sim.precio?.toLocaleString('es-CL')}</p>
                     </div>
                   </Link>
@@ -142,14 +142,14 @@ export default function DetalleAuto() {
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col" onClick={() => setLightbox(false)}>
           <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800">
             <span className="text-white font-black text-sm">{auto.marca} {auto.modelo}</span>
-            <button onClick={() => setLightbox(false)} className="text-white hover:text-orange-500 text-2xl transition-all">✕</button>
+            <button onClick={() => setLightbox(false)} className="text-white hover:text-orange-500 text-2xl transition-all">âœ•</button>
           </div>
           <div className="flex-1 flex items-center justify-center relative" onClick={(e) => e.stopPropagation()}>
             <img src={auto.imagenes[imgActual]} alt={auto.marca} className="max-h-[80vh] max-w-[90vw] object-contain" />
             {auto.imagenes.length > 1 && (
               <>
-                <button onClick={() => setImgActual((prev) => (prev === 0 ? auto.imagenes.length - 1 : prev - 1))} className="absolute left-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-orange-500 text-white w-10 h-10 flex items-center justify-center transition-all text-xl">‹</button>
-                <button onClick={() => setImgActual((prev) => (prev === auto.imagenes.length - 1 ? 0 : prev + 1))} className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-orange-500 text-white w-10 h-10 flex items-center justify-center transition-all text-xl">›</button>
+                <button onClick={() => setImgActual((prev) => (prev === 0 ? auto.imagenes.length - 1 : prev - 1))} className="absolute left-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-orange-500 text-white w-10 h-10 flex items-center justify-center transition-all text-xl">â€¹</button>
+                <button onClick={() => setImgActual((prev) => (prev === auto.imagenes.length - 1 ? 0 : prev + 1))} className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-orange-500 text-white w-10 h-10 flex items-center justify-center transition-all text-xl">â€º</button>
               </>
             )}
           </div>

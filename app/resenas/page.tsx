@@ -2,18 +2,18 @@
 import FadeIn from '@/components/FadeIn'
 
 const resenas = [
-  { id: 1, inicial: 'S', comentario: 'Encontramos un vehiculo por medio de Chileautos y resulto ser que lo tenian en esta automotora. La atencion de Analia en todo momento fue muy buena, muy preocupada y profesional.', fecha: 'Hace 3 meses' },
+  { id: 1, inicial: 'S', comentario: 'Encontramos un vehículo por medio de Chileautos y resultó ser que lo tenian en esta automotora. La atención de Analía en todo momento fue muy buena, muy preocupada y profesional.', fecha: 'Hace 3 meses' },
   { id: 2, inicial: 'F', comentario: 'Los recomiendo al 100%!! Desde el minuto 1 un trato excelente, muy preocupados por el cliente, muy transparentes y excelentes precios. Fue muy buena experiencia.', fecha: 'Hace 9 meses' },
   { id: 3, inicial: 'M', comentario: 'Excelente servicio brindado por Analia e Ignacio. Recomiendo utilizar sus servicios de compra y venta de autos al 100%. 10/10', fecha: 'Hace 3 meses' },
   { id: 4, inicial: 'E', comentario: 'Apreciamos la capacidad de respuesta y proactividad de Analia, la compra fue una experiencia muy agradable. Nos fuimos con TAG y seguro en menos de 12 horas.', fecha: 'Hace 4 meses' },
-  { id: 5, inicial: 'C', comentario: 'Todo muy eficiente, pasos claros y el vehiculo es tal como lo habian publicitado. Nos prestaron toda la ayuda necesaria con el credito. 100% recomendable.', fecha: 'Hace 3 meses' },
-  { id: 6, inicial: 'D', comentario: 'Excelente experiencia con la compra de mi auto. Atencion cercana, rapido y eficiente. El lugar es muy comodo para ver el auto y la comunicacion fue siempre impecable.', fecha: 'Hace 5 meses' },
-  { id: 7, inicial: 'J', comentario: 'Muchas gracias por la excelente atencion. Analia se preocupo por cada detalle durante la compra; incluso me fui con el TAG listo para Valparaiso. Totalmente recomendable!', fecha: 'Hace 8 meses' },
-  { id: 8, inicial: 'D', comentario: 'Llegue a la automotora de Analia gracias a las excelentes resenas que habia leido y ahora entiendo perfectamente por que tantas personas la recomiendan. Una atencion impecable.', fecha: 'Hace 10 meses' },
-  { id: 9, inicial: 'J', comentario: 'Excelente atencion de Analia desde la primera cita hasta la post venta. Recomiendo 1000% porque se ven pocas veces personas tan dedicadas. Felices con nuestro BMW 520!', fecha: 'Hace 10 meses' },
-  { id: 10, inicial: 'G', comentario: 'Una atencion y experiencia de compra excepcional. La gestion fue eficiente y transparente, haciendo la compra de mi auto facil y agradable. Altamente recomendados por su servicio realmente premium.', fecha: 'Hace un año' },
-  { id: 11, inicial: 'S', comentario: 'Excelente servicio! Estoy muy feliz con mi auto y Analia me hizo todo muy facil. Contesto todas mis preguntas, me ayudo con seguro, TAG, y se aseguro de que yo me sintiera comoda. 100% recomendada.', fecha: 'Hace un año' },
-  { id: 12, inicial: 'R', comentario: 'Increible atencion, rapida y clara. Responden todas las dudas y cuentan con toda la documentacion necesaria del auto. 100% recomendados.', fecha: 'Hace 7 meses' },
+  { id: 5, inicial: 'C', comentario: 'Todo muy eficiente, pasos claros y el vehículo es tal como lo habían publicitado. Nos prestaron toda la ayuda necesaria con el credito. 100% recomendable.', fecha: 'Hace 3 meses' },
+  { id: 6, inicial: 'D', comentario: 'Excelente experiencia con la compra de mi auto. Atención cercana, rápido y eficiente. El lugar es muy cómodo para ver el auto y la comunicación fue siempre impecable.', fecha: 'Hace 5 meses' },
+  { id: 7, inicial: 'J', comentario: 'Muchas gracias por la excelente atención. Analía se preocupó por cada detalle durante la compra; incluso me fui con el TAG listo para Valparaíso. Totalmente recomendable!', fecha: 'Hace 8 meses' },
+  { id: 8, inicial: 'D', comentario: 'Llegué a la automotora de Analía gracias a las excelentes reseñas que había leído y ahora entiendo perfectamente por que tantas personas la recomiendan. Una atencion impecable.', fecha: 'Hace 10 meses' },
+  { id: 9, inicial: 'J', comentario: 'Excelente atención de Analía desde la primera cita hasta la post venta. Recomiendo 1000% porque se ven pocas veces personas tan dedicadas. Felices con nuestro BMW 520!', fecha: 'Hace 10 meses' },
+  { id: 10, inicial: 'G', comentario: 'Una atención y experiencia de compra excepcional. La gestión fue eficiente y transparente, haciendo la compra de mi auto fácil y agradable. Altamente recomendados por su servicio realmente premium.', fecha: 'Hace un aÃ±o' },
+  { id: 11, inicial: 'S', comentario: 'Excelente servicio! Estoy muy feliz con mi auto y Analia me hizo todo muy fácil. Contestó todas mis preguntas, me ayudó con seguro, TAG, y se aseguró de que yo me sintiera cómoda. 100% recomendada.', fecha: 'Hace un aÃ±o' },
+  { id: 12, inicial: 'R', comentario: 'Increíble atención, rápida y clara. Responden todas las dudas y cuentan con toda la documentación necesaria del auto. 100% recomendados.', fecha: 'Hace 7 meses' },
 ]
 
 export default function Resenas() {
@@ -24,7 +24,7 @@ export default function Resenas() {
         <FadeIn>
           <div className="mb-12">
             <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Lo que dicen nuestros clientes</span>
-            <h2 className="text-5xl font-black tracking-tighter text-white mt-2">RESE<span className="text-orange-500">ÑAS</span></h2>
+            <h2 className="text-5xl font-black tracking-tighter text-white mt-2">RESE<span className="text-orange-500">Ã‘AS</span></h2>
           </div>
         </FadeIn>
         <FadeIn delay={0.2}>
@@ -32,14 +32,14 @@ export default function Resenas() {
             <div className="text-center">
               <p className="text-6xl font-black text-orange-500">{promedio}</p>
               <div className="flex gap-1 mt-1 justify-center">
-                {[1,2,3,4,5].map((s) => (<span key={s} className="text-orange-500 text-lg">★</span>))}
+                {[1,2,3,4,5].map((s) => (<span key={s} className="text-orange-500 text-lg">â˜…</span>))}
               </div>
-              <p className="text-gray-500 text-xs mt-1">+100 reseñas</p>
+              <p className="text-gray-500 text-xs mt-1">+100 reseÃ±as</p>
             </div>
             <div className="flex-1">
-              <p className="text-white font-bold text-lg">Calificacion general</p>
+              <p className="text-white font-bold text-lg">Calificación general</p>
               <p className="text-gray-400 text-sm mt-1">Basado en opiniones reales de Google.</p>
-              <a href="https://www.google.com/search?q=VP+MOTORS+resenas" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-orange-500 text-xs tracking-widest hover:underline">VER EN GOOGLE →</a>
+              <a href="https://www.google.com/search?q=VP+MOTORS+resenas" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-orange-500 text-xs tracking-widest hover:underline">VER EN GOOGLE â†’</a>
             </div>
           </div>
         </FadeIn>
@@ -53,7 +53,7 @@ export default function Resenas() {
                     <p className="text-gray-500 text-xs">{r.fecha}</p>
                   </div>
                   <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map((s) => (<span key={s} className="text-orange-500 text-sm">★</span>))}
+                    {[1,2,3,4,5].map((s) => (<span key={s} className="text-orange-500 text-sm">â˜…</span>))}
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">{r.comentario}</p>
@@ -63,7 +63,7 @@ export default function Resenas() {
         </div>
         <FadeIn delay={0.3}>
           <div className="mt-16 border-t border-zinc-800 pt-12 text-center">
-            <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Siguenos en Instagram</span>
+            <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Síguenos en Instagram</span>
             <h3 className="text-3xl font-black tracking-tighter text-white mt-2 mb-6">@<span className="text-orange-500">vpmotors_</span></h3>
             <a href="https://www.instagram.com/vpmotors_" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange-500 hover:bg-orange-600 text-black font-black text-sm px-10 py-4 tracking-widest transition-all">VER INSTAGRAM</a>
           </div>

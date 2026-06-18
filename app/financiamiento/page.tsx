@@ -30,10 +30,10 @@ export default function Financiamiento() {
 
   const porcentajePie = precioNum > 0 ? Math.round((pieNum / precioNum) * 100) : 0
   const pasos = [
-    { num: '01', titulo: 'Elige tu auto', desc: 'Navega nuestro stock y encuentra el vehiculo que mas te gusta.' },
-    { num: '02', titulo: 'Simula tu cuota', desc: 'Usa la calculadora para estimar tu cuota mensual segun tu pie y plazo.' },
-    { num: '03', titulo: 'Contactanos', desc: 'Nuestro equipo te asesora y gestiona el credito con los mejores bancos.' },
-    { num: '04', titulo: 'Maneja tu auto', desc: 'Aprobado el credito, coordinamos la entrega rapida con toda la documentacion al dia.' },
+    { num: '01', titulo: 'Elige tu auto', desc: 'Navega nuestro stock y encuentra el vehículo que más te gusta.' },
+    { num: '02', titulo: 'Simula tu cuota', desc: 'Usa la calculadora para estimar tu cuota mensual según tu pie y plazo.' },
+    { num: '03', titulo: 'Contáctanos', desc: 'Nuestro equipo te asesora y gestiona el crédito con los mejores bancos.' },
+    { num: '04', titulo: 'Maneja tu auto', desc: 'Aprobado el crédito, coordinamos la entrega rápida con toda la documentación al día.' },
   ]
 
   return (
@@ -44,7 +44,7 @@ export default function Financiamiento() {
           <div className="mb-12">
             <span className="text-orange-500 text-xs font-medium tracking-[0.3em] uppercase">Haz realidad tu compra</span>
             <h1 className="text-5xl font-black tracking-tighter text-white mt-2">FINANCIA<span className="text-orange-500">MIENTO</span></h1>
-            <p className="text-gray-500 mt-3 max-w-xl">Calcula tu cuota mensual estimada y consulta con nuestro equipo para conseguir el mejor credito del mercado.</p>
+            <p className="text-gray-500 mt-3 max-w-xl">Calcula tu cuota mensual estimada y consulta con nuestro equipo para conseguir el mejor crédito del mercado.</p>
           </div>
         </FadeIn>
 
@@ -61,7 +61,7 @@ export default function Financiamiento() {
                 </div>
               </div>
               <div>
-                <label className="text-orange-500 text-xs tracking-widest font-bold block mb-2">PIE — {porcentajePie}% del precio (minimo 20%)</label>
+                <label className="text-orange-500 text-xs tracking-widest font-bold block mb-2">PIE â€” {porcentajePie}% del precio (minimo 20%)</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm">$</span>
                   <input type="text" value={pie} onChange={handlePie} placeholder="0" className="w-full bg-zinc-900 border border-zinc-700 focus:border-orange-500 text-white pl-8 pr-4 py-3 text-sm outline-none transition-all" />
@@ -102,14 +102,14 @@ export default function Financiamiento() {
               </div>
               <div className="bg-orange-500/5 border border-orange-500/20 p-4">
                 <p className="text-orange-500 text-xs font-bold mb-1">VALOR ESTIMADO</p>
-                <p className="text-zinc-400 text-xs leading-relaxed">Este calculo es solo referencial con una tasa minima del 1,85% mensual y pie minimo del 20%. La cuota real depende del banco, tu perfil crediticio y las condiciones vigentes. Consulta con nuestro equipo para una simulacion oficial.</p>
+                <p className="text-zinc-400 text-xs leading-relaxed">Este cálculo es solo referencial con una tasa mínima del 1,85% mensual y pie mínimo del 20%. La cuota real depende del banco, tu perfil crediticio y las condiciones vigentes. Consulta con nuestro equipo para una simulación oficial.</p>
               </div>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col gap-6">
-              <h2 className="text-white font-black text-xl">COMO FUNCIONA</h2>
+              <h2 className="text-white font-black text-xl">CÓMO FUNCIONA</h2>
               <div className="space-y-4">
                 {pasos.map((paso) => (
                   <div key={paso.num} className="flex gap-4 bg-zinc-900 border border-zinc-800 p-4 hover:border-orange-500/30 transition-all">
@@ -137,10 +137,10 @@ export default function Financiamiento() {
         <FadeIn delay={0.4}>
           <div className="mt-16">
             <div className="border border-zinc-800 bg-zinc-900/50 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-black tracking-tighter text-white mb-3">Listo para <span className="text-orange-500">comenzar?</span></h2>
-              <p className="text-gray-500 mb-8">Contactanos y descubre la diferencia</p>
+              <h2 className="text-4xl font-black tracking-tighter text-white mb-3">¿Listo para <span className="text-orange-500">comenzar?</span></h2>
+              <p className="text-gray-500 mb-8">Contáctanos y descubre la diferencia</p>
               <a href="https://wa.me/56974891078?text=Hola, quiero consultar sobre financiamiento" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 border border-white/20 hover:border-orange-500 hover:text-orange-500 text-white font-bold text-sm px-8 py-4 rounded-full tracking-wide transition-all">
-                Hablar con un asesor →
+                Hablar con un asesor â†’
               </a>
             </div>
           </div>
