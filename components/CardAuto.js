@@ -46,14 +46,16 @@ export default function CardAuto({ auto }) {
             <div className="absolute top-3 left-3 bg-black/80 border border-orange-500/30 px-2 py-1">
               <span className="text-orange-500 text-xs font-bold tracking-widest">{auto.año}</span>
             </div>
-            {auto.vendido && (
-              <div className="absolute inset-0 bg-black/70 flex items-center justify-center z-10">
-                <span className="bg-orange-500 text-black font-black text-lg px-6 py-2 tracking-widest -rotate-6">VENDIDO</span>
+            {auto.vendido ? (
+              <div className="absolute top-3 right-3 bg-black/80 text-white text-xs font-bold px-3 py-1.5 rounded-md flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                Vendido
               </div>
+            ) : (
+              <button onClick={compartir} className="absolute top-3 right-3 bg-black/70 hover:bg-orange-500 text-white px-2 py-1 text-xs font-bold tracking-widest transition-all">
+                {copiado ? '✓ COPIADO' : '⬡ COMPARTIR'}
+              </button>
             )}
-            <button onClick={compartir} className="absolute top-3 right-3 bg-black/70 hover:bg-orange-500 text-white px-2 py-1 text-xs font-bold tracking-widest transition-all">
-              {copiado ? '✓ COPIADO' : '⬡ COMPARTIR'}
-            </button>
             {auto.imagenes.length > 1 && (
               <>
                 <button onClick={anterior} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-orange-500 text-white w-7 h-7 flex items-center justify-center transition-all text-xs">‹</button>
