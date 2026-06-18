@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
@@ -38,7 +38,7 @@ export default function DetalleAuto() {
     </div>
   )
 
-  const msgWhatsapp = "https://wa.me/56974891078?text=Hola me interesa el " + auto.marca + " " + auto.modelo + " " + auto.aÃ±o
+  const msgWhatsapp = "https://wa.me/56974891078?text=Hola me interesa el " + auto.marca + " " + auto.modelo + " " + auto.año
   const specs = [
     { label: 'Kilometraje', valor: auto.km?.toLocaleString() + ' km' },
     { label: 'Combustible', valor: auto.combustible },
@@ -83,7 +83,7 @@ export default function DetalleAuto() {
           <FadeIn delay={0.2}>
             <div className="flex flex-col gap-4">
               <div>
-                <span className="text-orange-500 text-lg font-black tracking-widest">{auto.aÃ±o}</span>
+                <span className="text-orange-500 text-lg font-black tracking-widest">{auto.año}</span>
                 <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-white mt-1 leading-none">{auto.marca} <span className="text-orange-500">{auto.modelo}</span></h1>
                 <p className="text-3xl font-black text-orange-500 mt-3">${auto.precio?.toLocaleString('es-CL')}</p>
               </div>
@@ -126,7 +126,7 @@ export default function DetalleAuto() {
                     </div>
                     <div className="p-4">
                       <h3 className="text-white font-black">{sim.marca} <span className="text-orange-500">{sim.modelo}</span></h3>
-                      <p className="text-gray-500 text-xs mt-1">{sim.aÃ±o} â€¢ {sim.km?.toLocaleString()} km</p>
+                      <p className="text-gray-500 text-xs mt-1">{sim.año} â€¢ {sim.km?.toLocaleString()} km</p>
                       <p className="text-orange-500 font-black mt-2">${sim.precio?.toLocaleString('es-CL')}</p>
                     </div>
                   </Link>
