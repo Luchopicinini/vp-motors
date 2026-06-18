@@ -20,7 +20,7 @@ export default function Consignacion() {
 
   const pasos = [
     { num: '01', titulo: 'Evaluacion', desc: 'Llevas tu auto a nuestras instalaciones, lo revisamos y te entregamos una tasacion justa segun el mercado.' },
-    { num: '02', titulo: 'Publicacion', desc: 'Tomamos fotos profesionales y publicamos tu auto en nuestra web y redes sociales para llegar a mas compradores.' },
+    { num: '02', titulo: 'Publicacion', desc: 'Tomamos fotos y videos profesionales de tu auto y lo publicamos en nuestra web, redes sociales, ChileAutos, Yapo y MercadoLibre para maximizar su exposicion.' },
     { num: '03', titulo: 'Gestion completa', desc: 'Nosotros recibimos las consultas, coordinamos las visitas y negociamos con los interesados. Tu no tienes que lidiar con nadie.' },
     { num: '04', titulo: 'Venta y pago', desc: 'Cuando el auto se vende, te transferimos el dinero de forma segura, descontando solo nuestra comision.' },
   ]
