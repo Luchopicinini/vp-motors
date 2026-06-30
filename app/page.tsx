@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchAutos = async () => {
-      const { data } = await supabase.from('autos').select('*').order('id', { ascending: false }).limit(3)
+      const { data } = await supabase.from('autos').select('*').eq('destacado', true).order('id', { ascending: false }).limit(3)
       if (data) setAutos(data.map((a: any) => ({ ...a, imagenes: a.imagenes ? a.imagenes.split(',') : [] })))
     }
     fetchAutos()

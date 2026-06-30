@@ -47,9 +47,12 @@ export default function CardAuto({ auto }) {
               <span className="text-orange-500 text-xs font-bold tracking-widest">{auto.año}</span>
             </div>
             {auto.vendido ? (
-              <div className="absolute top-3 right-3 bg-black/80 text-white text-xs font-bold px-3 py-1.5 rounded-md flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                Vendido
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-black/75 absolute inset-0"></div>
+                <div className="relative bg-black text-white text-sm font-black px-6 py-3 flex items-center gap-2 z-10">
+                  <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                  VENDIDO
+                </div>
               </div>
             ) : (
               <button onClick={compartir} className="absolute top-3 right-3 bg-black/70 hover:bg-orange-500 text-white px-2 py-1 text-xs font-bold tracking-widest transition-all">
